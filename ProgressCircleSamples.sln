@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArcDrawingSamples", "ArcDra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcDrawing001", "ArcDrawingSamples\ArcDrawing001\ArcDrawing001.csproj", "{B1C20828-D7F6-44A0-89F3-EEA2790DC7C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcDrawing002", "ArcDrawing002\ArcDrawing002.csproj", "{9519C6F5-59FF-4E93-90AD-4AFF50668FE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcDrawing002", "ArcDrawingSamples\ArcDrawing002\ArcDrawing002.csproj", "{9519C6F5-59FF-4E93-90AD-4AFF50668FE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
