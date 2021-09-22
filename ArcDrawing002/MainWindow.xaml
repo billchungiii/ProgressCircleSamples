@@ -1,0 +1,16 @@
+﻿<Window x:Class="ArcDrawing002.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArcDrawing002"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="200">
+    <Grid>
+        <Grid>
+            <Border Width="100" Height="100" Background="LightBlue">
+                <local:Arc Stroke="Brown" StrokeThickness="1" EndAngle="270" />
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
