@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcDrawing001", "ArcDrawing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcDrawing002", "ArcDrawingSamples\ArcDrawing002\ArcDrawing002.csproj", "{9519C6F5-59FF-4E93-90AD-4AFF50668FE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcDrawing003", "ArcDrawingSamples\ArcDrawing003\ArcDrawing003.csproj", "{00EB6366-14E5-46A2-8D06-854B7FD3FF02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{9519C6F5-59FF-4E93-90AD-4AFF50668FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9519C6F5-59FF-4E93-90AD-4AFF50668FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9519C6F5-59FF-4E93-90AD-4AFF50668FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00EB6366-14E5-46A2-8D06-854B7FD3FF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00EB6366-14E5-46A2-8D06-854B7FD3FF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00EB6366-14E5-46A2-8D06-854B7FD3FF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00EB6366-14E5-46A2-8D06-854B7FD3FF02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B1C20828-D7F6-44A0-89F3-EEA2790DC7C7} = {CED30317-01E6-49B7-A44D-245E43AC22F8}
 		{9519C6F5-59FF-4E93-90AD-4AFF50668FE7} = {CED30317-01E6-49B7-A44D-245E43AC22F8}
+		{00EB6366-14E5-46A2-8D06-854B7FD3FF02} = {CED30317-01E6-49B7-A44D-245E43AC22F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3EB73C1-2655-454E-BF36-27DD7ACEF2ED}

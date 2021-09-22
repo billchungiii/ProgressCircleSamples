@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace ArcDrawing002
+namespace ArcDrawing003
 {
     public class Arc : Shape
     {
@@ -18,7 +18,6 @@ namespace ArcDrawing002
             return value;
         }
 
-
         public double EndAngle
         {
             get => (double)GetValue(EndAngleProperty);
@@ -32,9 +31,11 @@ namespace ArcDrawing002
                 StreamGeometry geometry = new StreamGeometry();
                 using (StreamGeometryContext context = geometry.Open())
                 {
-                    context.BeginFigure(new Point(RenderSize.Width / 2, 0), false, false);
+
+                    context.BeginFigure(new Point(RenderSize.Width / 2.0, StrokeThickness / 2.0), false, false);
                     var end = GetScreenCoordinate();
-                    context.ArcTo(end, new Size(RenderSize.Width / 2, RenderSize.Height / 2), 0.0, IsLargeArc(), SweepDirection.Clockwise, true, true);
+                    (double radiusX, double radiusY) = GetRadii();
+                    context.ArcTo(end, new Size(radiusX > 0 ? radiusX : 0, radiusY > 0 ? radiusY : 0), 0.0, IsLargeArc(), SweepDirection.Clockwise, true, true);
                 }
 
                 return geometry;
@@ -53,18 +54,19 @@ namespace ArcDrawing002
             return result;
         }
 
-        private Point GetCenter()
+        private (double radiusX, double radiusY) GetRadii()
         {
-            return new Point(RenderSize.Width / 2, RenderSize.Height / 2);
+            return ((RenderSize.Width - StrokeThickness) / 2.0 , (RenderSize.Height - StrokeThickness) / 2.0) ;
         }
 
         private Point GetScreenCoordinate()
         {
             var angle = EndAngleToPolarAngle();
-            var center = GetCenter();
+
             double radian = angle * Math.PI / 180.0;
-            var x = center.X + (RenderSize.Width / 2) * Math.Cos(radian);
-            var y = RenderSize.Height - (center.Y + (RenderSize.Height / 2) * Math.Sin(radian));
+            (double radiusX, double radiusY) = GetRadii();
+            var x = RenderSize.Width / 2.0 + radiusX * Math.Cos(radian);
+            var y = (RenderSize.Height - (StrokeThickness / 2.0)) - (radiusY + radiusY * Math.Sin(radian));
             return new Point(x, y);
         }
     }
